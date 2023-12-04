@@ -2,7 +2,7 @@ package ArrayList;
 
 import java.util.ArrayList;
 
-public class AñadirTodo {
+public class AnadirTodo {
     public static void main(String[] args) {
         ArrayList<Integer> numeros = new ArrayList<>();
 

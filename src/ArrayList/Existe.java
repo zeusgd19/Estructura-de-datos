@@ -11,7 +11,7 @@ public class Existe {
         numeros.add(3);
         numeros.add(4);
 
-        int numero = 4;
+        int numero = 7;
 
         if(existe(numeros,numero)){
             System.out.println("Existe");

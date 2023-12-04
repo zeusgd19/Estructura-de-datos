@@ -10,7 +10,7 @@ public class ReparteRegalos {
     public static String reparte (int portalInicial, int ...secuencia){
         int min = Integer.MAX_VALUE;
         int posicion = 0;
-        String resultado = "";
+        String resultado = " ";
         ArrayList<Integer> orden = new ArrayList<>();
         ArrayList<Integer> portales = new ArrayList<>();
         for (int i = 0; i < secuencia.length; i++) {
