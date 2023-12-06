@@ -6,10 +6,20 @@ public class Altura {
     public static void main(String[] args) {
         int numAlumnos = numeroAlumnos();
         ArrayList<Double> alturas = leerAlturas(numAlumnos);
-        mostrarResultados(alturas);
+        double media = calcularMedia(alturas);
+        mostrarResultados(alturas,media);
     }
     public static int numeroAlumnos(){
         return Utilidades.leerEntero("Cuántos alumnos?");
+    }
+
+    public static ArrayList<Double> leerAlturas(int numAlumnos){
+        ArrayList<Double> alturas = new ArrayList<Double>();
+        System.out.printf("Introduzca las %d alturas", numAlumnos);
+        for (int i = 1; i <= numAlumnos; i++){
+            alturas.add(Utilidades.leerDoble(""));
+        }
+        return alturas;
     }
     public static double calcularMedia(ArrayList<Double> alturas){
         double suma = 0.0;
@@ -36,8 +46,8 @@ public class Altura {
         }
         return contador;
     }
-    public static void mostrarResultados(ArrayList<Double> alturas){
-        double media = calcularMedia(alturas);
+
+    public static void mostrarResultados(ArrayList<Double> alturas,double media){
         int superior = calcularAlumnosAlturaSuperior(alturas, media);
         int inferior = calcularAlumnosAlturaInferior(alturas, media);
 
@@ -51,14 +61,6 @@ public class Altura {
 
         System.out.printf("El número de alummos con una altura superior es %d%n", superior);
         System.out.printf("El número de alummos con una altura inferior es %d%n", inferior);
-    }
-    public static ArrayList<Double> leerAlturas(int numAlumnos){
-        ArrayList<Double> alturas = new ArrayList<Double>();
-        System.out.printf("Introduzca las %d alturas", numAlumnos);
-        for (int i = 1; i <= numAlumnos; i++){
-            alturas.add(Utilidades.leerDoble(""));
-        }
-        return alturas;
     }
 }
 

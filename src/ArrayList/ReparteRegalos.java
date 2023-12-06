@@ -11,19 +11,20 @@ public class ReparteRegalos {
         int min = Integer.MAX_VALUE;
         int posicion = 0;
         String resultado = " ";
+        int portalActual = portalInicial;
         ArrayList<Integer> orden = new ArrayList<>();
         ArrayList<Integer> portales = new ArrayList<>();
-        for (int i = 0; i < secuencia.length; i++) {
-            portales.add(secuencia[i]);
+        for (int k : secuencia) {
+            portales.add(k);
         }
 
         for (int i = 0; i < portales.size(); i++) {
             for (int j = 0; j < portales.size(); j++) {
-                if(portales.get(j) != portalInicial && !orden.contains(portales.get(j))) {
-                    if (Math.abs(portalInicial - portales.get(j)) < min) {
-                        min = Math.abs(portalInicial - portales.get(j));
+                if(portales.get(j) != portalActual && !orden.contains(portales.get(j))) {
+                    if (Math.abs(portalActual - portales.get(j)) < min) {
+                        min = Math.abs(portalActual - portales.get(j));
                         posicion = j;
-                    } else if (Math.abs(portalInicial - portales.get(j)) == min) {
+                    } else if (Math.abs(portalActual - portales.get(j)) == min) {
                         if (portales.get(posicion) < portales.get(j)) {
                             posicion = j;
                         }
@@ -32,13 +33,13 @@ public class ReparteRegalos {
             }
             orden.add(portales.get(posicion));
             min = Integer.MAX_VALUE;
-            portalInicial = portales.get(posicion);
+            portalActual = portales.get(posicion);
 
         }
         for (int i:orden
              ) {
             resultado+=i +" ";
         }
-        return resultado;
+        return portalInicial + "" + resultado;
     }
 }
