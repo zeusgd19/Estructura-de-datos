@@ -40,6 +40,6 @@ public class ReparteRegalos {
              ) {
             resultado+=i +" ";
         }
-        return portalInicial + "" + resultado;
+        return resultado;
     }
 }

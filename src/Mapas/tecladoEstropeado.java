@@ -33,24 +33,29 @@ public class tecladoEstropeado {
                     i = 0;
                     for (int j = guardarPosicion; j < clave.length(); j++) {
                         switch (clave.charAt(j)){
-                            case '3':  clave = clave.substring(0,i) + "" + clave.substring(i+1);
+                            case '3':
+                                clave = clave.substring(0,i) + "" + clave.substring(i+1);
                                 j--;
                                 clave = clave.substring(0,j) + "" + clave.substring(j+1);
                                 j--;
                                 break;
-                            case '*':i = i+1;
+                            case '*':
+                                i = i+1;
                                 clave = clave.substring(0,j) + "" + clave.substring(j+1);
                                 j--;
                                 break;
-                            case '+':clave = clave.substring(0,j) + "" + clave.substring(j+1);
+                            case '+':
+                                clave = clave.substring(0,j) + "" + clave.substring(j+1);
                                 i = clave.length() - 1;
                                 j--;
                                 break;
-                            case '-':i = 0;
+                            case '-':
+                                i = 0;
                                 clave = clave.substring(0,j) + "" + clave.substring(j+1);
                                 j--;
                                 break;
-                            default: caracter = clave.charAt(i) + "";
+                            default:
+                                caracter = clave.charAt(i) + "";
                                 clave = clave.substring(0,i) + clave.charAt(j) + clave.substring(i+1);
                                 if(!caracter.equals(clave.charAt(i) + "")) {
                                     clave = clave.substring(0,j) + "" + clave.substring(j+1);
