@@ -14,6 +14,7 @@ public class Frecuencia {
             palabra = sc.nextLine();
         }
 
+        
         contar(frecuencia,palabras);
         for (String clave:frecuencia.keySet()
              ) {
