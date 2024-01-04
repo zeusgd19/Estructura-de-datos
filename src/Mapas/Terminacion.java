@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Terminacion {
     public static void main(String[] args) {
+        //OK
         Scanner sc = new Scanner(System.in);
         Map<String,Integer> ultimaTerminacion = new HashMap<>();
         String boleto;

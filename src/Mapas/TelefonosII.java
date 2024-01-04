@@ -4,6 +4,7 @@ import java.util.*;
 
 public class TelefonosII {
     public static void main(String[] args) {
+        //OK
         HashMap<String, ArrayList<String>> contactos = new HashMap<>();
 
         contactos.put("Miguel",new ArrayList<>(Arrays.asList("645984182","690283891")));
