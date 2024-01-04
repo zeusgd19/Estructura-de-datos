@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class Parentesis {
     public static void main(String[] args) {
+        //OK
         boolean parentizado = esParentizado("(esta[()] mal {[]}(");
         if(parentizado){
             System.out.println("Esta bien parentizado");

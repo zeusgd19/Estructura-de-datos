@@ -26,6 +26,7 @@ public class Anagrama {
     }
 
     public static void main(String[] args) throws IOException {
+        //OK
         int minGroupSize = 5;
         Map<String, ArrayList<String>> mapa = new HashMap<>();
         BufferedReader reader = new BufferedReader(new FileReader("spanish-dict.txt"));

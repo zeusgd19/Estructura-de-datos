@@ -6,6 +6,7 @@ import java.util.Stack;
 
 public class ExpresionesAritmeticas {
     public static void main(String[] args) {
+        //OK
         System.out.println(pila("0 0 /"));
         System.out.println(cola("0 0 /"));
     }

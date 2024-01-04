@@ -23,6 +23,7 @@ public class CountCountries {
         }
     }
     public static void main(String[] args) throws IOException {
+        //OK
         BufferedReader reader = new BufferedReader(new FileReader("Colfuturo-Seleccionados.csv"));
         String line;
 
